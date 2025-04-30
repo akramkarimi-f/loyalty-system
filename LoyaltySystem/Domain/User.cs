@@ -1,4 +1,4 @@
-﻿namespace LoyaltySystem.WebApi.Domain;
+﻿namespace LoyaltySystem.Domain;
 
 public class User
 {

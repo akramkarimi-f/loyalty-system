@@ -1,16 +1,37 @@
 ﻿services:
   loyalty-system:
-    image: loyalty-system:latest
+    container_name: loyalty-system
     build:
       context: .
       dockerfile: LoyaltySystem\Dockerfile
     ports:
-      - "8081:443"    # HTTPS
-      - "8080:80"     # HTTP (optional)
+      - "8081:443"
+      - "8080:80"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: "https://+:443;http://+:80"
+      ConnectionStrings__DefaultConnection: "Server=sqlserver;Database=LoyaltyDb;User Id=sa;Password=Your_password123;Encrypt=False;"
+      ConnectionStrings__Redis: "redis:6379"
+    depends_on:
+      - redis
+      - sqlserver
     volumes:
       - ~/.aspnet/https:/https:ro
+      - ./logs:/app/logs
     command: >
       dotnet LoyaltySystem.dll
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:latest
+    container_name: sqlserver
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "Your_password123"
+      ACCEPT_EULA: "Y"

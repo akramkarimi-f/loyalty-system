@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using LoyaltySystem.Presentation.Extensions;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
-namespace LoyaltySystem.WebApi.Presentation.Extensions;
+namespace LoyaltySystem.Presentation.Extensions;
 
 public static class AuthenticationInstaller
 {
@@ -14,7 +15,7 @@ public static class AuthenticationInstaller
         {
             options.Authority = builder.Configuration["Authentication:Authority"];
             options.Audience = builder.Configuration["Authentication:Audience"];
-            options.RequireHttpsMetadata = false;
+            //options.RequireHttpsMetadata = false;
             options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
             {
                 ValidateIssuer = true,

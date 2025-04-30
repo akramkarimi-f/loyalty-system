@@ -1,8 +1,8 @@
 ﻿using FluentValidation;
 using FluentValidation.AspNetCore;
-using LoyaltySystem.WebApi.Domain.Validators;
+using LoyaltySystem.Presentation.Validators;
 
-namespace LoyaltySystem.WebApi.Presentation.Extensions;
+namespace LoyaltySystem.Presentation.Extensions;
 
 public static class ValidationInstaller
 {

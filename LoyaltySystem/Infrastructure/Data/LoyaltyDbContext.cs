@@ -1,8 +1,8 @@
-﻿using LoyaltySystem.WebApi.Domain;
-using LoyaltySystem.WebApi.Infrastructure.Data.Configurations;
+﻿using LoyaltySystem.Domain;
+using LoyaltySystem.Infrastructure.Data.Configurations;
 using Microsoft.EntityFrameworkCore;
 
-namespace LoyaltySystem.WebApi.Infrastructure.Data;
+namespace LoyaltySystem.Infrastructure.Data;
 
 public class LoyaltyDbContext : DbContext
 {

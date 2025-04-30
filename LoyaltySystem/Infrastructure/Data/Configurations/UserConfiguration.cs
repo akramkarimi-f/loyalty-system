@@ -1,8 +1,8 @@
-﻿using LoyaltySystem.WebApi.Domain;
+﻿using LoyaltySystem.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace LoyaltySystem.WebApi.Infrastructure.Data.Configurations;
+namespace LoyaltySystem.Infrastructure.Data.Configurations;
 
 public class UserConfiguration : IEntityTypeConfiguration<User>
 {

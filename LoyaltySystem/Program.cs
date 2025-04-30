@@ -1,4 +1,4 @@
-using LoyaltySystem.WebApi.Presentation.Extensions;
+using LoyaltySystem.Presentation.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 

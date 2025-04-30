@@ -1,4 +1,4 @@
-﻿namespace LoyaltySystem.WebApi.Presentation.Models;
+﻿namespace LoyaltySystem.Presentation.Models;
 
 public class EarnPointsRequest
 {

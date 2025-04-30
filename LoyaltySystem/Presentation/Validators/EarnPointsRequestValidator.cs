@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
-using LoyaltySystem.WebApi.Presentation.Models;
+using LoyaltySystem.Presentation.Models;
 
-namespace LoyaltySystem.WebApi.Domain.Validators;
+namespace LoyaltySystem.Presentation.Validators;
 
 public class EarnPointsRequestValidator : AbstractValidator<EarnPointsRequest>
 {

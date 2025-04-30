@@ -1,4 +1,4 @@
-﻿namespace LoyaltySystem.WebApi.Infrastructure.Configurations;
+﻿namespace LoyaltySystem.Infrastructure.Configurations;
 
 public class InitialUserOptions
 {

@@ -1,10 +1,10 @@
-﻿using LoyaltySystem.WebApi.Domain;
-using LoyaltySystem.WebApi.Infrastructure.Configurations;
-using LoyaltySystem.WebApi.Infrastructure.Data;
+﻿using LoyaltySystem.Domain;
+using LoyaltySystem.Infrastructure.Configurations;
+using LoyaltySystem.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
-namespace LoyaltySystem.WebApi.Presentation.Extensions;
+namespace LoyaltySystem.Presentation.Extensions;
 
 public static class DatabaseInstaller
 {
@@ -30,7 +30,7 @@ public static class DatabaseInstaller
         // Seed user if ExternalId not already exists
         if (!dbContext.Users.Any(u => u.ExternalId == initial.ExternalId))
         {
-            dbContext.Users.Add(new User
+            var user = dbContext.Users.Add(new User
             {
                 Name = initial.Name,
                 ExternalId = initial.ExternalId,
@@ -38,7 +38,7 @@ public static class DatabaseInstaller
             });
 
             await dbContext.SaveChangesAsync();
-            Console.WriteLine($"Seeded initial user with ExternalId: {initial.ExternalId}");
+            Console.WriteLine($"Seeded initial user with ID: {user.Entity.Id}");
         }
     }
 }

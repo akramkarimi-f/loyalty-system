@@ -1,4 +1,4 @@
-﻿namespace LoyaltySystem.WebApi.Application.Services;
+﻿namespace LoyaltySystem.Application.Users;
 
 public interface IUserService
 {

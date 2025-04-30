@@ -1,6 +1,6 @@
 ﻿using Serilog;
 
-namespace LoyaltySystem.WebApi.Presentation.Extensions;
+namespace LoyaltySystem.Presentation.Extensions;
 
 public static class LoggerInstaller
 {

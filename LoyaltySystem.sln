@@ -7,9 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoyaltySystem", "LoyaltySys
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
 		.gitignore = .gitignore
 		docker-compose.yml = docker-compose.yml
+		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoyaltySystem.UnitTest", "LoyaltySystem.UnitTest\LoyaltySystem.UnitTest.csproj", "{8AF80C2C-0E2C-451F-A533-01ACD9BF141C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,10 @@ Global
 		{0E87AB4C-CBF6-4131-9BF2-2FACC46ECD48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E87AB4C-CBF6-4131-9BF2-2FACC46ECD48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E87AB4C-CBF6-4131-9BF2-2FACC46ECD48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AF80C2C-0E2C-451F-A533-01ACD9BF141C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AF80C2C-0E2C-451F-A533-01ACD9BF141C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AF80C2C-0E2C-451F-A533-01ACD9BF141C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AF80C2C-0E2C-451F-A533-01ACD9BF141C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
