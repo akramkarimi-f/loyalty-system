@@ -1,0 +1,16 @@
+﻿services:
+  loyalty-system:
+    image: loyalty-system:latest
+    build:
+      context: .
+      dockerfile: LoyaltySystem\Dockerfile
+    ports:
+      - "8081:443"    # HTTPS
+      - "8080:80"     # HTTP (optional)
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: "https://+:443;http://+:80"
+    volumes:
+      - ~/.aspnet/https:/https:ro
+    command: >
+      dotnet LoyaltySystem.dll
